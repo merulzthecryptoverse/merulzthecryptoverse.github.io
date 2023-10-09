@@ -1,16 +1,8 @@
 # My Creative Works
 <!DOCTYPE html>
 <html>
-<head>
-  <title>My First Webpage</title>
-  <style>
-    h1 {
-      color: blue;
-    }
-    p {
-      font-size: 14px;
-    }
-  </style>
+
+
 </head>
 <body>
   <h1>Welcome to My Webpage</h1>
