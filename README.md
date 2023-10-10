@@ -1,8 +1,4 @@
 
-<!DOCTYPE html>
-<html>
-
-
 </head>
 <body>
   <h1>Welcome to My Webpage</h1>
