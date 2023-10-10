@@ -17,6 +17,14 @@
 
 <br/>
 
+  <p class="SecondPara">
+    Here are some buttons I made:
+  </p>
+
+<br/>
+
+<br/>
+
 <button class="subscribe-button">
   SUBSCRIBE
 </button>
