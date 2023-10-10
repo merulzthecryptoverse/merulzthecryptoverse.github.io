@@ -1,18 +1,41 @@
 
 </head>
 <body>
-  <h1>Welcome to My Webpage</h1>
+
+  <h1 class="MainHeader">
+    Welcome to My Webpage
+  </h1>
   
-  <p>I just started learning HTML, here is a video I made:</p>
+  <p class="FirstPara">
+    I just started learning HTML, here is a video I made:
+  </p>
 
 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/yXcM4aOT4Wg?si=M4NA8Zs7R55Tuxae" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+<br/>
+
+<br/>
+
+<button class="subscribe-button">
+  SUBSCRIBE
+</button>
+
+<button class="join-button">
+  JOIN
+</button>
+
+<button class="tweet-button">
+  Tweet
+</button>
 
 
 
 <style>
+  .Mainheader {
+   color: blue;
+  }
   .subscribe-button {
     background-color: rgba(200, 0, 0);
     color: white;
@@ -50,20 +73,7 @@
 
 </style>
 
-<button class="subscribe-button">
-  SUBSCRIBE
-</button>
 
-<button class="join-button">
-  JOIN
-</button>
-
-<button class="tweet-button">
-  Tweet
-</button>
-
-
-  
 
 
   
