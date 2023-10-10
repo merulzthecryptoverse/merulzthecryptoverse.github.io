@@ -1,5 +1,4 @@
 
-</head>
 <body>
 
   <h1 class="MainHeader">
@@ -79,4 +78,3 @@
   
 </body>
 
-</html>
