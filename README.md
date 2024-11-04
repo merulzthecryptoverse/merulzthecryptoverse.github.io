@@ -42,7 +42,7 @@
   Tweet
 </button>
 
-</div>
+
 
 <style>
   .Mainheader {
@@ -82,9 +82,11 @@
     font-size: 15px;
     cursor: pointer;
   }
+<br/>
 
+<br/>
 </style>
-
+</div>
 
 
 
