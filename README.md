@@ -7,7 +7,7 @@
 
    <h3 style="color:red" title="You are hovering over my header" class="MainHeader">
     Hong Kong Hacks, Adventures, and Lifestyle Tips
-  </h4>
+  </h3>
 
  <div style="border: 1px solid red">
     
