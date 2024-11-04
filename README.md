@@ -90,8 +90,8 @@
     background-color: rgb(2, 158, 255);
     color: rgb(242, 243, 245);
     border: none;
-    height: 36px;
-    width: 82px;
+    height: 40px;
+    width: 90px;
     border-radius: 18px;
     font-weight: bold;
     font-size: 15px;
