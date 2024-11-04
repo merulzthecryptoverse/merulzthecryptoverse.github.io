@@ -20,6 +20,8 @@
 
 <br/>
 
+<div style="border: 1px solid red">
+
   <p class="SecondPara">
     Here are some buttons I made:
   </p>
@@ -40,7 +42,7 @@
   Tweet
 </button>
 
-
+</div>
 
 <style>
   .Mainheader {
