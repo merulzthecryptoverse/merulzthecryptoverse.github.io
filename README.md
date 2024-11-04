@@ -22,10 +22,10 @@
   <div style="border: 1px solid red">
     
 <p style="color:white;" class="FirstPara">
-    Here is a video I made:
+    Here is an AI generated video I made:
   </p>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/yXcM4aOT4Wg?si=M4NA8Zs7R55Tuxae" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://youtu.be/kns6AtI2XQE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 </div>
 
