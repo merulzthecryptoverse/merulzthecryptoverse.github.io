@@ -91,7 +91,7 @@
     color: rgb(242, 243, 245);
     border: none;
     height: 40px;
-    width: 90px;
+    width: 95px;
     border-radius: 18px;
     font-weight: bold;
     font-size: 15px;
