@@ -11,7 +11,7 @@
     Here is an AI-generated image I made:
   </p>
 
-<img src="https://scontent-hkg1-2.xx.fbcdn.net/v/t39.30808-6/465237508_122101090316596174_6996163836068378838_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=-U045qucsQUQ7kNvgE5V7AJ&_nc_zt=23&_nc_ht=scontent-hkg1-2.xx&_nc_gid=AZGe9abM3kh6jTzalgJSijS&oh=00_AYDSwqSQs4tkixCbIZrixxGiA3Ku6HblXq12PFXqTR9dkA&oe=672DF6CE" alt="Surfs up in HongKong">
+<img src="https://scontent-hkg1-2.xx.fbcdn.net/v/t39.30808-6/465582951_122104691936596174_6804495341972588398_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=5xY8EHeS5bwQ7kNvgEDgC3V&_nc_zt=23&_nc_ht=scontent-hkg1-2.xx&_nc_gid=ApCLXpvs499EUmh1ATkbVx2&oh=00_AYDS05qYKxlYBbxvsvtoXZRjqDbswb9iZ7q6nV8R1wcSUQ&oe=672E092F" alt="Surfs up in HongKong">
 
 </div>
 
