@@ -1,7 +1,6 @@
 
-<!DOCTYPE html>
 
-<body style="background-color:black;">
+<body style="background-color:powderblue;">
 
   <h1 title="You are hovering over my header" class="MainHeader">
     Welcome to My Webpage
