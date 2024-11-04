@@ -44,7 +44,13 @@
   Tweet
 </button>
 
+<br/>
 
+<br/>
+
+<p style="color:white;" class="SecondPara">
+    I hope you enjoy clicking around.
+  </p>
 
 <style>
   .Mainheader {
@@ -84,9 +90,7 @@
     font-size: 15px;
     cursor: pointer;
   }
-<br/>
 
-<br/>
 </style>
 </div>
 
