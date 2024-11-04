@@ -4,6 +4,17 @@
   <h1 style="color:red" title="You are hovering over my header" class="MainHeader">
     Welcome to My Webpage
   </h1>
+
+ <div style="border: 1px solid red">
+    
+<p style="color:white;" class="FirstPara">
+    Here is an AI-generated image I made:
+  </p>
+
+<img src="https://tinypic.host/image/465237508-122101090316596174-6996163836068378838-n.2dkix5" alt="Surfs up in HongKong">
+
+</div>
+
   
   <div style="border: 1px solid red">
     
