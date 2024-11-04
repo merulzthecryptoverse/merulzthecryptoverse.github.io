@@ -11,7 +11,7 @@
     Here is an AI-generated image I made:
   </p>
 
-<img src="https://tinypic.host/image/465237508-122101090316596174-6996163836068378838-n.2dkix5" alt="Surfs up in HongKong">
+<img src="https://scontent-hkg1-2.xx.fbcdn.net/v/t39.30808-6/465237508_122101090316596174_6996163836068378838_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=-U045qucsQUQ7kNvgE5V7AJ&_nc_zt=23&_nc_ht=scontent-hkg1-2.xx&_nc_gid=AZGe9abM3kh6jTzalgJSijS&oh=00_AYDSwqSQs4tkixCbIZrixxGiA3Ku6HblXq12PFXqTR9dkA&oe=672DF6CE" alt="Surfs up in HongKong">
 
 </div>
 
