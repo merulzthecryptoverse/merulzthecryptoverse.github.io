@@ -6,7 +6,7 @@
     Welcome to My Webpage
   </h1>
   
-  <p "style=color:white" class="FirstPara";>
+  <p style="color:white" class="FirstPara";>
     I just started learning HTML, here is a video I made:
   </p>
 
