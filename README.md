@@ -25,7 +25,7 @@
     Here is an AI generated video I made:
   </p>
 
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=kns6AtI2XQE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kns6AtI2XQE?si=qx2LNgDLWe4p4W0J" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 </div>
 
