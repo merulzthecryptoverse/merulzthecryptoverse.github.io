@@ -5,7 +5,9 @@
   <h1 style="color:red" title="You are hovering over my header" class="MainHeader">
     Welcome to My Webpage
   </h1>
+  
   <div style="border: 1px solid red">
+    
   <p style="color:azure" class="FirstPara";>
     I just started learning HTML, here is a video I made:
   </p>
@@ -22,7 +24,7 @@
 
 <div style="border: 1px solid red">
 
-  <p class="SecondPara">
+  <p style="color:azure" class="SecondPara">
     Here are some buttons I made:
   </p>
 
