@@ -8,7 +8,7 @@
   
   <div style="border: 1px solid red">
     
-  <p style="color:azure" class="FirstPara";>
+  <p style="color:white" class="FirstPara";>
     I just started learning HTML, here is a video I made:
   </p>
 
@@ -24,7 +24,7 @@
 
 <div style="border: 1px solid red">
 
-  <p style="color:azure" class="SecondPara">
+  <p style="color:white" class="SecondPara">
     Here are some buttons I made:
   </p>
 
