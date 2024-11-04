@@ -43,11 +43,11 @@
     Here are some buttons I made:
   </p>
 
-<button onclick="https://www.youtube.com/@HongKongHacks" class="youtube-button">
+<button onclick="window.location.href='https://www.youtube.com/@HongKongHacks';" class="youtube-button">
   YOUTUBE
 </button>
 
-<button onclick="hhttps://www.facebook.com/pit.shoster.200585" class="facebook-button">
+<button onclick="window.location.href='https://www.facebook.com/pit.shoster.200585';" class="facebook-button">
   FACEBOOK
 </button>
 
