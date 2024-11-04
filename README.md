@@ -1,7 +1,9 @@
 
+<!DOCTYPE html>
+
 <body>
 
-  <h1 class="MainHeader">
+  <h1 title="You are hovering over my header" class="MainHeader">
     Welcome to My Webpage
   </h1>
   
@@ -85,4 +87,4 @@
 
   
 </body>
-
+</html>
