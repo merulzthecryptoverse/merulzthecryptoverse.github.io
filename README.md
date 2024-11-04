@@ -43,16 +43,12 @@
     Here are some buttons I made:
   </p>
 
-<button class="subscribe-button">
-  SUBSCRIBE
+<button onclick="https://www.youtube.com/@HongKongHacks" class="youtube-button">
+  YOUTUBE
 </button>
 
-<button class="join-button">
-  JOIN
-</button>
-
-<button class="tweet-button">
-  Tweet
+<button onclick="hhttps://www.facebook.com/pit.shoster.200585" class="facebook-button">
+  FACEBOOK
 </button>
 
 <br/>
@@ -67,7 +63,7 @@
   .Mainheader {
    color: blue;
   }
-  .subscribe-button {
+  .youtube-button {
     background-color: rgba(200, 0, 0);
     color: white;
     border: none;
@@ -90,7 +86,7 @@
     margin-right: 8px;
   }
 
-  .tweet-button {
+  .facebook-button {
     background-color: rgb(2, 158, 255);
     color: rgb(242, 243, 245);
     border: none;
