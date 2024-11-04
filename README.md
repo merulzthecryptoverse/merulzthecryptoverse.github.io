@@ -1,5 +1,4 @@
 
-
 <body style="background-color:black;">
 
   <h1 style="color:red" title="You are hovering over my header" class="MainHeader">
@@ -8,11 +7,9 @@
   
   <div style="border: 1px solid red">
     
-  <p style="color:white;" class="FirstPara";>
-    I just started learning HTML, here is a video I made:
+<p style="color:white;" class="FirstPara">
+    Here is a video I made:
   </p>
-
-
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/yXcM4aOT4Wg?si=M4NA8Zs7R55Tuxae" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -27,10 +24,6 @@
   <p style="color:white;" class="SecondPara">
     Here are some buttons I made:
   </p>
-
-<br/>
-
-<br/>
 
 <button class="subscribe-button">
   SUBSCRIBE
