@@ -25,8 +25,38 @@
   }
 
   .MainHeader {
-    color: red; /* Matches your original red headers */
+    color: red; /* Keep your original red color */
     text-align: center;
+    font-family: 'Press Start 2P', cursive; /* Retro pixel font */
+    font-size: 2.5em; /* Slightly larger for impact */
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(255, 0, 0, 0.6); /* Initial red glow */
+    animation: neonGlow 2s infinite alternate, pulse 1.5s infinite ease-in-out; /* Apply animations */
+  }
+
+  /* Neon glow animation with color shifts */
+  @keyframes neonGlow {
+    0% {
+      text-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(255, 0, 0, 0.6), 0 0 30px rgba(255, 0, 0, 0.4);
+    }
+    50% {
+      text-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 0.4); /* Cyan glow */
+    }
+    100% {
+      text-shadow: 0 0 10px rgba(255, 0, 255, 0.8), 0 0 20px rgba(255, 0, 255, 0.6), 0 0 30px rgba(255, 0, 255, 0.4); /* Magenta glow */
+    }
+  }
+
+  /* Pulse animation for subtle scaling */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
   }
 
   .FirstPara, .SecondPara {
@@ -50,7 +80,6 @@
     width: auto; /* Allow natural width up to max-width */
   }
 
-  /* Optional: Fine-tune for smaller screens */
   @media (max-width: 600px) {
     img {
       width: 100%; /* Force image to take full width on mobile */
@@ -64,7 +93,6 @@
     height: auto; /* Maintain aspect ratio */
   }
 
-  /* Fine-tune for smaller screens */
   @media (max-width: 600px) {
     iframe {
       width: 100%; /* Force iframe to take full width on mobile */
