@@ -15,7 +15,7 @@
     Here is an AI-generated image I made:
   </p>
 
-<img src="https://github.com/merulzthecryptoverse/merulzthecryptoverse.github.io/blob/Images/465237508_122101090316596174_6996163836068378838_n%" alt="Surfs up in HongKong">
+<img src="https://github.com/merulzthecryptoverse/merulzthecryptoverse.github.io/blob/Images/465237508_122101090316596174_6996163836068378838_n%20-%20Copy.jpg?raw=true" alt="Surfs up in HongKong">
 
 </div>
 
