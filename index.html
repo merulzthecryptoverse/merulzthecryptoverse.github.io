@@ -59,6 +59,16 @@
   iframe {
     display: block;
     margin: 0 auto;
+    max-width: 100%; /* Ensure iframe scales to fit container */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  /* Fine-tune for smaller screens */
+  @media (max-width: 600px) {
+    iframe {
+      width: 100%; /* Force iframe to take full width on mobile */
+      height: auto; /* Adjust height automatically */
+    }
   }
 
   .youtube-button {
@@ -76,7 +86,7 @@
     background-color: rgb(2, 158, 255);
     color: rgb(242, 243, 245);
     border: none;
-    height  height: 40px;
+    height: 40px;
     width: 95px;
     border-radius: 18px;
     font-weight: bold;
