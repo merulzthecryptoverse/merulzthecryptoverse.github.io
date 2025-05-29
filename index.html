@@ -76,7 +76,7 @@
   /* Content Container Styles */
   .content-div {
     border: 1px solid red;
-    padding: 15px; /* Increased padding for better spacing */
+    padding: 15px;
     margin-bottom: 20px;
     background: rgba(0, 0, 0, 0.5);
     border-radius: 5px;
@@ -94,7 +94,7 @@
   .video-wrapper {
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio (9/16 = 0.5625) */
+    padding-bottom: 56.25%;
     margin: 0 auto;
   }
 
@@ -119,39 +119,41 @@
   }
 
   .facebook-button {
-    background-color: #1877F2; /* Official Facebook blue */
+    background: linear-gradient(#1877F2, #145DBF); /* Facebook blue gradient */
     color: white;
     border: none;
-    height: 40px;
+    height: 36px; /* Match YouTube button */
     width: 105px;
     border-radius: 5px;
+    font-family: Arial, sans-serif;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 14px;
     cursor: pointer;
     position: relative;
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
     transition: transform 0.2s, box-shadow 0.3s;
   }
 
-  .facebook-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 10px rgba(24, 119, 242, 0.8);
-  }
-
   .facebook-button::before {
-    content: 'f';
+    content: 'f'; /* Lowercase 'f' logo */
     position: absolute;
-    left: 10px;
+    left: 8px; /* Adjusted for better spacing */
     top: 50%;
     transform: translateY(-50%);
-    font-size: 20px;
+    font-size: 18px; /* Slightly smaller for balance */
     font-weight: normal;
     color: white;
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.8); /* Glow for retro effect */
   }
 
   .facebook-button span {
     display: inline-block;
-    margin-left: 20px;
+    margin-left: 25px; /* Increased spacing for the 'f' */
+  }
+
+  .facebook-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(24, 119, 242, 0.8);
   }
 
   .button-container {
@@ -163,18 +165,14 @@
     .MainHeader { font-size: 1.8em; }
     h3.MainHeader { font-size: 1em; }
     img { width: 100%; }
-    .video-wrapper {
-      width: 100%; /* Ensure full width on mobile */
-    }
-    .content-div {
-      padding: 10px; /* Slightly reduce padding on mobile to avoid cramped feel */
-    }
+    .video-wrapper { width: 100%; }
+    .content-div { padding: 10px; }
   }
 
   @media (min-width: 601px) {
     .video-wrapper {
-      width: 80%; /* Slightly smaller on desktop for better proportion */
-      max-width: 640px; /* Cap at a reasonable size for larger screens */
+      width: 80%;
+      max-width: 640px;
     }
   }
 </style>
@@ -206,7 +204,7 @@
     <p class="SecondPara">Here are some buttons I made:</p>
     <div class="button-container">
       <button onclick="window.location.href='https://www.youtube.com/@HongKongHacks';" class="youtube-button">YOUTUBE</button>
-      <button onclick="window.location.href='https://www.facebook.com/pit.shoster.200585';" class="facebook-button">FACEBOOK</button>
+      <button onclick="window.location.href='https://www.facebook.com/pit.shoster.200585';" class="facebook-button"><span>FACEBOOK</span></button>
     </div>
     <p class="SecondPara">I hope you enjoy clicking around.</p>
   </div>
