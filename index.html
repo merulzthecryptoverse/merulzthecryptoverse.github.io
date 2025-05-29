@@ -28,9 +28,18 @@
     color: red; /* Keep your original red color */
     text-align: center;
     font-family: 'Press Start 2P', cursive; /* Retro pixel font */
-    font-size: 2.5em; /* Slightly larger for impact */
+    font-size: 2.5em; /* Bold size for main heading */
     text-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(255, 0, 0, 0.6); /* Initial red glow */
     animation: neonGlow 2s infinite alternate, pulse 1.5s infinite ease-in-out; /* Apply animations */
+  }
+
+  /* Subheading styling */
+  h3.MainHeader {
+    font-family: Arial, sans-serif; /* Lighter, readable font */
+    font-size: 1.2em; /* Smaller size for subheading */
+    color: #ff4040; /* Slightly lighter red for contrast */
+    text-shadow: 0 0 5px rgba(255, 64, 64, 0.7); /* Subtle glow */
+    animation: none; /* Remove animations for cleaner look */
   }
 
   /* Neon glow animation with color shifts */
@@ -81,6 +90,12 @@
   }
 
   @media (max-width: 600px) {
+    .MainHeader {
+      font-size: 1.8em; /* Reduce main heading size on mobile */
+    }
+    h3.MainHeader {
+      font-size: 1em; /* Reduce subheading size on mobile */
+    }
     img {
       width: 100%; /* Force image to take full width on mobile */
     }
