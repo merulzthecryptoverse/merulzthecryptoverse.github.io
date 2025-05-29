@@ -108,21 +108,48 @@
 
   /* Button Styles */
   .youtube-button {
-    background-color: rgba(200, 0, 0);
+    background: linear-gradient(#FF0000, #CC0000); /* YouTube red gradient */
     color: white;
     border: none;
     height: 36px;
     width: 105px;
     border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 14px;
     cursor: pointer;
     margin-right: 8px;
+    position: relative;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+    transition: transform 0.2s, box-shadow 0.3s;
+  }
+
+  .youtube-button::before {
+    content: '\25B6'; /* Unicode for right-facing triangle (play button) */
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px; /* Smaller for balance */
+    color: white;
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.8); /* Glow for retro effect */
+  }
+
+  .youtube-button span {
+    display: inline-block;
+    margin-left: 25px; /* Space for the play button */
+  }
+
+  .youtube-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.8); /* Red glow on hover */
   }
 
   .facebook-button {
-    background: linear-gradient(#1877F2, #145DBF); /* Facebook blue gradient */
+    background: linear-gradient(#1877F2, #145DBF);
     color: white;
     border: none;
-    height: 36px; /* Match YouTube button */
+    height: 36px;
     width: 105px;
     border-radius: 5px;
     font-family: Arial, sans-serif;
@@ -135,20 +162,20 @@
   }
 
   .facebook-button::before {
-    content: 'f'; /* Lowercase 'f' logo */
+    content: 'f';
     position: absolute;
-    left: 8px; /* Adjusted for better spacing */
+    left: 8px;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 18px; /* Slightly smaller for balance */
+    font-size: 18px;
     font-weight: normal;
     color: white;
-    text-shadow: 0 0 3px rgba(255, 255, 255, 0.8); /* Glow for retro effect */
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.8);
   }
 
   .facebook-button span {
     display: inline-block;
-    margin-left: 25px; /* Increased spacing for the 'f' */
+    margin-left: 25px;
   }
 
   .facebook-button:hover {
@@ -162,9 +189,9 @@
 
   /* Responsive Design */
   @media (max-width: 600px) {
-    .MainHeader { font-size: 1.8em; }
+    .MainHeader { font-size: 連結1.8em; }
     h3.MainHeader { font-size: 1em; }
-    img { width: 100%; }
+    img { width: 100%; } 
     .video-wrapper { width: 100%; }
     .content-div { padding: 10px; }
   }
@@ -203,7 +230,7 @@
   <div class="content-div">
     <p class="SecondPara">Here are some buttons I made:</p>
     <div class="button-container">
-      <button onclick="window.location.href='https://www.youtube.com/@HongKongHacks';" class="youtube-button">YOUTUBE</button>
+      <button onclick="window.location.href='https://www.youtube.com/@HongKongHacks';" class="youtube-button"><span>YOUTUBE</span></button>
       <button onclick="window.location.href='https://www.facebook.com/pit.shoster.200585';" class="facebook-button"><span>FACEBOOK</span></button>
     </div>
     <p class="SecondPara">I hope you enjoy clicking around.</p>
