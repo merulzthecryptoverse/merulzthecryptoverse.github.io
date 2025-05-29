@@ -217,7 +217,7 @@
 
   <div class="content-div">
     <p class="FirstPara">Here is an AI-generated image I made:</p>
-    <img src="https://raw.githubusercontent.com/merulzthecryptoverse/merulzthecryptoverse.github.io/main/Images/465237508_122101090316596174_6996163836068378838_n%20-%20Copy.jpg" alt="Surfs up in HongKong">
+    <img src="https://github.com/merulzthecryptoverse/merulzthecryptoverse.github.io/blob/Images/465237508_122101090316596174_6996163836068378838_n%20-%20Copy.jpg?raw=true" alt="Surfs up in HongKong">
   </div>
 
   <div class="content-div">
@@ -313,41 +313,97 @@
     let dy = 0;
     let score = 0;
     const gridSize = 10;
-    let gameInterval;
-
-    // Handle key presses
-    document.addEventListener('keydown', (event) => {
-      switch (event.key) {
-        case 'ArrowUp': if (dy === 0) { dx = 0; dy = -1; } break;
-        case 'ArrowDown': if (dy === 0) { dx = 0; dy = 1; } break;
-        case 'ArrowLeft': if (dx === 0) { dx = -1; dy = 0; } break;
-        case 'ArrowRight': if (dx === 0) { dx = 1; dy = 0; } break;
-      }
-    });
+    const gridWidth = snakeCanvas.width / gridSize;
+    const gridHeight = snakeCanvas.height / gridSize;
+    let gameStarted = false;
 
     // Generate new food position
     function generateFood() {
       food = {
-        x: Math.floor(Math.random() * (snakeCanvas.width / gridSize)),
-        y: Math.floor(Math.random() * (snakeCanvas.height / gridSize))
+        x: Math.floor(Math.random() * gridWidth),
+        y: Math.floor(Math.random() * gridHeight)
       };
+      // Ensure food doesn't spawn on snake
+      for (let segment of snake) {
+        if (food.x === segment.x && food.y === segment.y) {
+          generateFood();
+        }
+      }
     }
+
+    // Start game on click or touch
+    function startGame() {
+      if (!gameStarted) {
+        gameStarted = true;
+        gameLoop();
+      }
+    }
+
+    snakeCanvas.addEventListener('click', startGame);
+    snakeCanvas.addEventListener('touchstart', startGame);
+
+    // Touch controls
+    snakeCanvas.addEventListener('touchstart', (event) => {
+      event.preventDefault();
+      const touch = event.touches[0];
+      const rect = snakeCanvas.getBoundingClientRect();
+      const touchX = touch.clientX - rect.left;
+      const touchY = touch.clientY - rect.top;
+
+      const centerX = snakeCanvas.width / 2;
+      const centerY = snakeCanvas.height / 2;
+
+      // Determine direction based on touch position and current direction
+      if (dx !== 0) { // Moving horizontally
+        if (touchY < centerY) { // Top half
+          dx = 0;
+          dy = -1; // Up
+        } else { // Bottom half
+          dx = 0;
+          dy = 1; // Down
+        }
+      } else { // Moving vertically
+        if (touchX < centerX) { // Left half
+          dx = -1;
+          dy = 0; // Left
+        } else { // Right half
+          dx = 1;
+          dy = 0; // Right
+        }
+      }
+    });
 
     // Game loop
     function gameLoop() {
+      if (!gameStarted) {
+        // Draw "Press to Start"
+        snakeCtx.fillStyle = 'black';
+        snakeCtx.fillRect(0, 0, snakeCanvas.width, snakeCanvas.height);
+        snakeCtx.fillStyle = 'white';
+        snakeCtx.font = '20px Arial';
+        snakeCtx.textAlign = 'center';
+        snakeCtx.fillText('Press to Start', snakeCanvas.width / 2, snakeCanvas.height / 2);
+        return;
+      }
+
       const head = { x: snake[0].x + dx, y: snake[0].y + dy };
+
+      // Edge wrapping
+      if (head.x < 0) head.x = gridWidth - 1;
+      if (head.x >= gridWidth) head.x = 0;
+      if (head.y < 0) head.y = gridHeight - 1;
+      if (head.y >= gridHeight) head.y = 0;
 
       // Check collision with self
       for (let segment of snake) {
         if (head.x === segment.x && head.y === segment.y) {
-          clearInterval(gameInterval);
+          gameStarted = false;
           alert(`Game Over! Score: ${score}`);
           snake = [{ x: 10, y: 10 }];
           dx = 1;
           dy = 0;
           score = 0;
           generateFood();
-          gameInterval = setInterval(gameLoop, 100);
           return;
         }
       }
@@ -379,11 +435,15 @@
       // Draw score
       snakeCtx.fillStyle = 'white';
       snakeCtx.font = '12px Arial';
+      snakeCtx.textAlign = 'start';
       snakeCtx.fillText(`Score: ${score}`, 5, 15);
+
+      // Continue game loop
+      setTimeout(gameLoop, 100);
     }
 
-    // Start the game
-    gameInterval = setInterval(gameLoop, 100);
+    // Initial draw for "Press to Start"
+    gameLoop();
   </script>
 </body>
 </html>
