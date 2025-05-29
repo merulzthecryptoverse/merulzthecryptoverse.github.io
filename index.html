@@ -5,166 +5,136 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Insiders Guide to Hong Kong</title>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Orbitron:wght@400&display=swap" rel="stylesheet">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Insiders Guide to Hong Kong</title>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <style>
-  body {
-    margin: 0;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    position: relative;
-    color: white; /* Ensure text is readable over animated background */
-  }
-
-  /* Canvas for screensaver effect */
-  #backgroundCanvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* Place behind content */
-  }
-
-  .MainHeader {
-    color: red; /* Keep your original red color */
-    text-align: center;
-    font-family: 'Press Start 2P', cursive; /* Retro pixel font */
-    font-size: 2.5em; /* Bold size for main heading */
-    text-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(255, 0, 0, 0.6); /* Initial red glow */
-    animation: neonGlow 2s infinite alternate, pulse 1.5s infinite ease-in-out; /* Apply animations */
-  }
-
-  /* Subheading styling */
-  h3.MainHeader {
-    font-family: Arial, sans-serif; /* Lighter, readable font */
-    font-size: 1.2em; /* Smaller size for subheading */
-    color: #ff4040; /* Slightly lighter red for contrast */
-    text-shadow: 0 0 5px rgba(255, 64, 64, 0.7); /* Subtle glow */
-    animation: none; /* Remove animations for cleaner look */
-  }
-
-  /* Neon glow animation with color shifts */
-  @keyframes neonGlow {
-    0% {
-      text-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(255, 0, 0, 0.6), 0 0 30px rgba(255, 0, 0, 0.4);
+    /* General Styles */
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      position: relative;
+      color: white; /* Ensures text readability over animated background */
     }
-    50% {
-      text-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 0.4); /* Cyan glow */
-    }
-    100% {
-      text-shadow: 0 0 10px rgba(255, 0, 255, 0.8), 0 0 20px rgba(255, 0, 255, 0.6), 0 0 30px rgba(255, 0, 255, 0.4); /* Magenta glow */
-    }
-  }
 
-  /* Pulse animation for subtle scaling */
-  @keyframes pulse {
-    0% {
-      transform: scale(1);
+    /* Canvas for screensaver background */
+    #backgroundCanvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1; /* Places canvas behind content */
     }
-    50% {
-      transform: scale(1.05);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
 
-  /* Fade-in animation for paragraph text */
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .FirstPara, .SecondPara {
-    color: #00ffff; /* Cyan color for a retro tech vibe */
-    text-align: center;
-    font-family: 'Orbitron', sans-serif; /* Futuristic font */
-    font-size: 1.1em; /* Slightly larger for emphasis */
-    text-shadow: 0 0 8px rgba(0, 255, 255, 0.7), 0 0 15px rgba(0, 255, 255, 0.5); /* Cyan glow */
-    animation: fadeIn 1s ease-in forwards; /* Fade-in animation */
-  }
-
-  .content-div {
-    border: 1px solid red;
-    padding: 10px;
-    margin-bottom: 20px;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
-    border-radius: 5px;
-  }
-
-  img {
-    display: block;
-    margin: 0 auto;
-    max-width: 100%; /* Ensure image scales to fit container */
-    height: auto; /* Maintain aspect ratio */
-    width: auto; /* Allow natural width up to max-width */
-  }
-
-  @media (max-width: 600px) {
+    /* Main Heading Styles */
     .MainHeader {
-      font-size: 1.8em; /* Reduce main heading size on mobile */
+      color: red;
+      text-align: center;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 2.5em;
+      text-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(255, 0, 0, 0.6);
+      animation: neonGlow 2s infinite alternate, pulse 1.5s infinite ease-in-out;
     }
+
+    /* Subheading Styles */
     h3.MainHeader {
-      font-size: 1em; /* Reduce subheading size on mobile */
+      font-family: Arial, sans-serif;
+      font-size: 1.2em;
+      color: #ff4040;
+      text-shadow: 0 0 5px rgba(255, 64, 64, 0.7);
+      animation: none;
     }
+
+    /* Animations */
+    @keyframes neonGlow {
+      0% { text-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(255, 0, 0, 0.6), 0 0 30px rgba(255, 0, 0, 0.4); }
+      50% { text-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.6), 0 0 30px rgba(0, 255, 255, 0.4); }
+      100% { text-shadow: 0 0 10px rgba(255, 0, 255, 0.8), 0 0 20px rgba(255, 0, 255, 0.6), 0 0 30px rgba(255, 0, 255, 0.4); }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(10px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Paragraph Styles */
+    .FirstPara,
+    .SecondPara {
+      color: #00ffff;
+      text-align: center;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.1em;
+      text-shadow: 0 0 8px rgba(0, 255, 255, 0.7), 0 0 15px rgba(0, 255, 255, 0.5);
+      animation: fadeIn 1s ease-in forwards;
+    }
+
+    /* Content Container Styles */
+    .content-div {
+      border: 1px solid red;
+      padding: 10px;
+      margin-bottom: 20px;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 5px;
+    }
+
+    /* Media Elements */
     img {
-      width: 100%; /* Force image to take full width on mobile */
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      height: auto;
     }
-  }
 
-  iframe {
-    display: block;
-    margin: 0 auto;
-    max-width: 100%; /* Ensure iframe scales to fit container */
-    height: auto; /* Maintain aspect ratio */
-  }
-
-  @media (max-width: 600px) {
     iframe {
-      width: 100%; /* Force iframe to take full width on mobile */
-      height: auto; /* Adjust height automatically */
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      height: auto;
     }
-  }
 
-  .youtube-button {
-    background-color: rgba(200, 0, 0);
-    color: white;
-    border: none;
-    height: 36px;
-    width: 105px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-right: 8px;
-  }
+    /* Button Styles */
+    .youtube-button {
+      background-color: rgba(200, 0, 0);
+      color: white;
+      border: none;
+      height: 36px;
+      width: 105px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-right: 8px;
+    }
 
-  .facebook-button {
-    background-color: rgb(2, 158, 255);
-    color: rgb(242, 243, 245);
-    border: none;
-    height: 40px;
-    width: 95px;
-    border-radius: 18px;
-    font-weight: bold;
-    font-size: 15px;
-    cursor: pointer;
-  }
+    .facebook-button {
+      background-color: rgb(2, 158, 255);
+      color: rgb(242, 243, 245);
+      border: none;
+      height: 40px;
+      width: 95px;
+      border-radius: 18px;
+      font-weight: bold;
+      font-size: 15px;
+      cursor: pointer;
+    }
 
-  .button-container {
-    text-align: center;
-  }
-</style>
+    .button-container {
+      text-align: center;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 600px) {
+      .MainHeader { font-size: 1.8em; }
+      h3.MainHeader { font-size: 1em; }
+      img { width: 100%; }
+      iframe { width: 100%; }
+    }
+  </style>
 </head>
 <body>
-  <!-- Canvas for screensaver background -->
   <canvas id="backgroundCanvas"></canvas>
 
   <h1 title="You are hovering over my header" class="MainHeader">
@@ -176,42 +146,30 @@
   </h3>
 
   <div class="content-div">
-    <p class="FirstPara">
-      Here is an AI-generated image I made:
-    </p>
-    <img src="https://github.com/merulzthecryptoverse/merulzthecryptoverse.github.io/blob/Images/465237508_122101090316596174_6996163836068378838_n%20-%20Copy.jpg?raw=true" alt="Surfs up in HongKong">
+    <p class="FirstPara">Here is an AI-generated image I made:</p>
+    <img src="https://raw.githubusercontent.com/merulzthecryptoverse/merulzthecryptoverse.github.io/main/Images/465237508_122101090316596174_6996163836068378838_n%20-%20Copy.jpg" alt="Surfs up in HongKong">
   </div>
 
   <div class="content-div">
-    <p class="FirstPara">
-      Here is an AI-generated video I made:
-    </p>
-    <iframe width="308" height="174" src="https://www.youtube.com/embed/kns6AtI2XQE?si=qx2LNgDLWe4p4W0J" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <p class="FirstPara">Here is an AI-generated video I made:</p>
+    <iframe src="https://www.youtube.com/embed/kns6AtI2XQE?si=qx2LNgDLWe4p4W0J" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
 
   <div class="content-div">
-    <p class="SecondPara">
-      Here are some buttons I made:
-    </p>
+    <p class="SecondPara">Here are some buttons I made:</p>
     <div class="button-container">
-      <button onclick="window.location.href='https://www.youtube.com/@HongKongHacks';" class="youtube-button">
-        YOUTUBE
-      </button>
-      <button onclick="window.location.href='https://www.facebook.com/pit.shoster.200585';" class="facebook-button">
-        FACEBOOK
-      </button>
+      <button onclick="window.location.href='https://www.youtube.com/@HongKongHacks';" class="youtube-button">YOUTUBE</button>
+      <button onclick="window.location.href='https://www.facebook.com/pit.shoster.200585';" class="facebook-button">FACEBOOK</button>
     </div>
-    <p class="SecondPara">
-      I hope you enjoy clicking around.
-    </p>
+    <p class="SecondPara">I hope you enjoy clicking around.</p>
   </div>
 
   <script>
-    // Mystify Your Mind-inspired screensaver
+    // Mystify-inspired screensaver animation
     const canvas = document.getElementById('backgroundCanvas');
     const ctx = canvas.getContext('2d');
 
-    // Set canvas size to window size
+    // Resize canvas to match window dimensions
     function resizeCanvas() {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
@@ -239,7 +197,7 @@
         this.x2 += this.vx2;
         this.y2 += this.vy2;
 
-        // Bounce off walls
+        // Bounce off canvas edges
         if (this.x1 < 0 || this.x1 > canvas.width) this.vx1 *= -1;
         if (this.y1 < 0 || this.y1 > canvas.height) this.vy1 *= -1;
         if (this.x2 < 0 || this.x2 > canvas.width) this.vx2 *= -1;
@@ -256,10 +214,9 @@
       }
     }
 
-    // Create multiple lines
+    // Initialize and animate lines
     const lines = Array.from({ length: 20 }, () => new Line());
 
-    // Animation loop
     function animate() {
       ctx.fillStyle = 'rgba(0, 0, 0, 0.1)'; // Fade effect
       ctx.fillRect(0, 0, canvas.width, canvas.height);
