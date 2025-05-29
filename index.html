@@ -217,15 +217,15 @@
 
   <div class="content-div">
     <p class="FirstPara">Here is an AI-generated image I made:</p>
-    <img src="https://github.com/merulzthecryptoverse/merulzthecryptoverse.github.io/blob/Images/465237508_122101090316596174_6996163836068378838_n%20-%20Copy.jpg?raw=true" alt="Surfs up in HongKong">
+    <img src="https://raw.githubusercontent.com/merulzthecryptoverse/merulzthecryptoverse.github.io/main/Images/465237508_122101090316596174_6996163836068378838_n%20-%20Copy.jpg" alt="Surfs up in HongKong">
   </div>
 
   <div class="content-div">
-  <p class="FirstPara">Here is an AI-generated video I made:</p>
-  <div class="video-wrapper">
-    <iframe src="https://www.youtube.com/embed/kns6AtI2XQE?si=qx2LNgDLWe4p4W0J" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <p class="FirstPara">Here is an AI-generated video I made:</p>
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/kns6AtI2XQE?si=qx2LNgDLWe4p4W0J" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
   </div>
-</div>
 
   <div class="content-div">
     <p class="SecondPara">Here are some buttons I made:</p>
@@ -236,24 +236,27 @@
     <p class="SecondPara">I hope you enjoy clicking around.</p>
   </div>
 
+  <div class="content-div">
+    <p class="SecondPara">Not interested? Why not play a game of snake:</p>
+    <canvas id="snakeCanvas" width="300" height="300"></canvas>
+  </div>
+
   <script>
     // Mystify-inspired screensaver animation
-    const canvas = document.getElementById('backgroundCanvas');
-    const ctx = canvas.getContext('2d');
+    const backgroundCanvas = document.getElementById('backgroundCanvas');
+    const ctx = backgroundCanvas.getContext('2d');
 
-    // Resize canvas to match window dimensions
     function resizeCanvas() {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      backgroundCanvas.width = window.innerWidth;
+      backgroundCanvas.height = window.innerHeight;
     }
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
-    // Line object for animation
     class Line {
       constructor() {
-        this.x1 = Math.random() * canvas.width;
-        this.y1 = Math.random() * canvas.height;
+        this.x1 = Math.random() * backgroundCanvas.width;
+        this.y1 = Math.random() * backgroundCanvas.height;
         this.x2 = this.x1 + (Math.random() * 100 - 50);
         this.y2 = this.y1 + (Math.random() * 100 - 50);
         this.vx1 = (Math.random() * 4 - 2);
@@ -269,11 +272,10 @@
         this.x2 += this.vx2;
         this.y2 += this.vy2;
 
-        // Bounce off canvas edges
-        if (this.x1 < 0 || this.x1 > canvas.width) this.vx1 *= -1;
-        if (this.y1 < 0 || this.y1 > canvas.height) this.vy1 *= -1;
-        if (this.x2 < 0 || this.x2 > canvas.width) this.vx2 *= -1;
-        if (this.y2 < 0 || this.y2 > canvas.height) this.vy2 *= -1;
+        if (this.x1 < 0 || this.x1 > backgroundCanvas.width) this.vx1 *= -1;
+        if (this.y1 < 0 || this.y1 > backgroundCanvas.height) this.vy1 *= -1;
+        if (this.x2 < 0 || this.x2 > backgroundCanvas.width) this.vx2 *= -1;
+        if (this.y2 < 0 || this.y2 > backgroundCanvas.height) this.vy2 *= -1;
       }
 
       draw() {
@@ -286,21 +288,102 @@
       }
     }
 
-    // Initialize and animate lines
     const lines = Array.from({ length: 20 }, () => new Line());
 
-    function animate() {
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.1)'; // Fade effect
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+    function animateBackground() {
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+      ctx.fillRect(0, 0, backgroundCanvas.width, backgroundCanvas.height);
 
       lines.forEach(line => {
         line.update();
         line.draw();
       });
 
-      requestAnimationFrame(animate);
+      requestAnimationFrame(animateBackground);
     }
-    animate();
+    animateBackground();
+
+    // Snake Game
+    const snakeCanvas = document.getElementById('snakeCanvas');
+    const snakeCtx = snakeCanvas.getContext('2d');
+
+    let snake = [{ x: 10, y: 10 }];
+    let food = { x: 15, y: 15 };
+    let dx = 1;
+    let dy = 0;
+    let score = 0;
+    const gridSize = 10;
+    let gameInterval;
+
+    // Handle key presses
+    document.addEventListener('keydown', (event) => {
+      switch (event.key) {
+        case 'ArrowUp': if (dy === 0) { dx = 0; dy = -1; } break;
+        case 'ArrowDown': if (dy === 0) { dx = 0; dy = 1; } break;
+        case 'ArrowLeft': if (dx === 0) { dx = -1; dy = 0; } break;
+        case 'ArrowRight': if (dx === 0) { dx = 1; dy = 0; } break;
+      }
+    });
+
+    // Generate new food position
+    function generateFood() {
+      food = {
+        x: Math.floor(Math.random() * (snakeCanvas.width / gridSize)),
+        y: Math.floor(Math.random() * (snakeCanvas.height / gridSize))
+      };
+    }
+
+    // Game loop
+    function gameLoop() {
+      const head = { x: snake[0].x + dx, y: snake[0].y + dy };
+
+      // Check collision with self
+      for (let segment of snake) {
+        if (head.x === segment.x && head.y === segment.y) {
+          clearInterval(gameInterval);
+          alert(`Game Over! Score: ${score}`);
+          snake = [{ x: 10, y: 10 }];
+          dx = 1;
+          dy = 0;
+          score = 0;
+          generateFood();
+          gameInterval = setInterval(gameLoop, 100);
+          return;
+        }
+      }
+
+      snake.unshift(head);
+
+      // Check if food is eaten
+      if (head.x === food.x && head.y === food.y) {
+        score += 1;
+        generateFood();
+      } else {
+        snake.pop();
+      }
+
+      // Clear canvas
+      snakeCtx.fillStyle = 'black';
+      snakeCtx.fillRect(0, 0, snakeCanvas.width, snakeCanvas.height);
+
+      // Draw snake
+      snakeCtx.fillStyle = 'green';
+      snake.forEach(segment => {
+        snakeCtx.fillRect(segment.x * gridSize, segment.y * gridSize, gridSize - 2, gridSize - 2);
+      });
+
+      // Draw food
+      snakeCtx.fillStyle = 'red';
+      snakeCtx.fillRect(food.x * gridSize, food.y * gridSize, gridSize - 2, gridSize - 2);
+
+      // Draw score
+      snakeCtx.fillStyle = 'white';
+      snakeCtx.font = '12px Arial';
+      snakeCtx.fillText(`Score: ${score}`, 5, 15);
+    }
+
+    // Start the game
+    gameInterval = setInterval(gameLoop, 100);
   </script>
 </body>
 </html>
