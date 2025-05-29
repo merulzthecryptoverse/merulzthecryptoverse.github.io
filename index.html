@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Insiders Guide to Hong Kong</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Orbitron:wght@400&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Insiders Guide to Hong Kong</title>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <style>
   body {
@@ -68,9 +72,25 @@
     }
   }
 
+  /* Fade-in animation for paragraph text */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
   .FirstPara, .SecondPara {
-    color: white;
+    color: #00ffff; /* Cyan color for a retro tech vibe */
     text-align: center;
+    font-family: 'Orbitron', sans-serif; /* Futuristic font */
+    font-size: 1.1em; /* Slightly larger for emphasis */
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.7), 0 0 15px rgba(0, 255, 255, 0.5); /* Cyan glow */
+    animation: fadeIn 1s ease-in forwards; /* Fade-in animation */
   }
 
   .content-div {
