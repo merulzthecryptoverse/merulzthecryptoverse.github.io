@@ -76,7 +76,7 @@
   /* Content Container Styles */
   .content-div {
     border: 1px solid red;
-    padding: 10px;
+    padding: 15px; /* Increased padding for better spacing */
     margin-bottom: 20px;
     background: rgba(0, 0, 0, 0.5);
     border-radius: 5px;
@@ -90,11 +90,20 @@
     height: auto;
   }
 
-  iframe {
-    display: block;
+  /* Video Wrapper for 16:9 Aspect Ratio */
+  .video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio (9/16 = 0.5625) */
     margin: 0 auto;
-    max-width: 100%;
-    height: auto;
+  }
+
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 
   /* Button Styles */
@@ -114,23 +123,23 @@
     color: white;
     border: none;
     height: 40px;
-    width: 105px; /* Match YouTube button width for consistency */
-    border-radius: 5px; /* Match YouTube button border-radius */
+    width: 105px;
+    border-radius: 5px;
     font-weight: bold;
     font-size: 15px;
     cursor: pointer;
     position: relative;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7); /* Subtle retro glow */
-    transition: transform 0.2s, box-shadow 0.3s; /* Smooth hover effects */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+    transition: transform 0.2s, box-shadow 0.3s;
   }
 
   .facebook-button:hover {
-    transform: scale(1.05); /* Slight scale on hover */
-    box-shadow: 0 0 10px rgba(24, 119, 242, 0.8); /* Neon glow on hover */
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(24, 119, 242, 0.8);
   }
 
   .facebook-button::before {
-    content: 'f'; /* Lowercase 'f' for Facebook logo */
+    content: 'f';
     position: absolute;
     left: 10px;
     top: 50%;
@@ -142,7 +151,7 @@
 
   .facebook-button span {
     display: inline-block;
-    margin-left: 20px; /* Space for the 'f' logo */
+    margin-left: 20px;
   }
 
   .button-container {
@@ -152,9 +161,21 @@
   /* Responsive Design */
   @media (max-width: 600px) {
     .MainHeader { font-size: 1.8em; }
-    h całą3.MainHeader { font-size: 1em; }
+    h3.MainHeader { font-size: 1em; }
     img { width: 100%; }
-    iframe { width: 100%; }
+    .video-wrapper {
+      width: 100%; /* Ensure full width on mobile */
+    }
+    .content-div {
+      padding: 10px; /* Slightly reduce padding on mobile to avoid cramped feel */
+    }
+  }
+
+  @media (min-width: 601px) {
+    .video-wrapper {
+      width: 80%; /* Slightly smaller on desktop for better proportion */
+      max-width: 640px; /* Cap at a reasonable size for larger screens */
+    }
   }
 </style>
 </head>
@@ -175,9 +196,11 @@
   </div>
 
   <div class="content-div">
-    <p class="FirstPara">Here is an AI-generated video I made:</p>
+  <p class="FirstPara">Here is an AI-generated video I made:</p>
+  <div class="video-wrapper">
     <iframe src="https://www.youtube.com/embed/kns6AtI2XQE?si=qx2LNgDLWe4p4W0J" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
+</div>
 
   <div class="content-div">
     <p class="SecondPara">Here are some buttons I made:</p>
