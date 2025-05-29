@@ -5,79 +5,89 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Insiders Guide to Hong Kong</title>
   <style>
-    body {
-      margin: 0;
-      padding: 20px;
-      font-family: Arial, sans-serif;
-      position: relative;
-      color: white; /* Ensure text is readable over animated background */
-    }
+  body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    position: relative;
+    color: white; /* Ensure text is readable over animated background */
+  }
 
-    /* Canvas for screensaver effect */
-    #backgroundCanvas {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1; /* Place behind content */
-    }
+  /* Canvas for screensaver effect */
+  #backgroundCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place behind content */
+  }
 
-    .MainHeader {
-      color: red; /* Matches your original red headers */
-      text-align: center;
-    }
+  .MainHeader {
+    color: red; /* Matches your original red headers */
+    text-align: center;
+  }
 
-    .FirstPara, .SecondPara {
-      color: white;
-      text-align: center;
-    }
+  .FirstPara, .SecondPara {
+    color: white;
+    text-align: center;
+  }
 
-    .content-div {
-      border: 1px solid red;
-      padding: 10px;
-      margin-bottom: 20px;
-      background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
-      border-radius: 5px;
-    }
+  .content-div {
+    border: 1px solid red;
+    padding: 10px;
+    margin-bottom: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+    border-radius: 5px;
+  }
 
+  img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%; /* Ensure image scales to fit container */
+    height: auto; /* Maintain aspect ratio */
+    width: auto; /* Allow natural width up to max-width */
+  }
+
+  /* Optional: Fine-tune for smaller screens */
+  @media (max-width: 600px) {
     img {
-      display: block;
-      margin: 0 auto;
+      width: 100%; /* Force image to take full width on mobile */
     }
+  }
 
-    iframe {
-      display: block;
-      margin: 0 auto;
-    }
+  iframe {
+    display: block;
+    margin: 0 auto;
+  }
 
-    .youtube-button {
-      background-color: rgba(200, 0, 0);
-      color: white;
-      border: none;
-      height: 36px;
-      width: 105px;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-right: 8px;
-    }
+  .youtube-button {
+    background-color: rgba(200, 0, 0);
+    color: white;
+    border: none;
+    height: 36px;
+    width: 105px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 8px;
+  }
 
-    .facebook-button {
-      background-color: rgb(2, 158, 255);
-      color: rgb(242, 243, 245);
-      border: none;
-      height: 40px;
-      width: 95px;
-      border-radius: 18px;
-      font-weight: bold;
-      font-size: 15px;
-      cursor: pointer;
-    }
+  .facebook-button {
+    background-color: rgb(2, 158, 255);
+    color: rgb(242, 243, 245);
+    border: none;
+    height  height: 40px;
+    width: 95px;
+    border-radius: 18px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+  }
 
-    .button-container {
-      text-align: center;
-    }
-  </style>
+  .button-container {
+    text-align: center;
+  }
+</style>
 </head>
 <body>
   <!-- Canvas for screensaver background -->
