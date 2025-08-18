@@ -158,13 +158,13 @@ try:
 
     calc_data = [
         ['6.4.1.1 Active Lateral Forces from Reclamation Fill', 'Ka_fill', '=TAN(RADIANS(45-Inputs!B44/2))^2', 'Active earth pressure coefficient for Reclamation Fill'],
-        ['', 'Pa_fill_dry_rect', '=Inputs!B30 * C5 * (Inputs!B66 + Inputs!B67)', 'Rectangular component of dry fill active force'],
+        ['', 'Pa_fill_dry_rect', '=Inputs!B30 * C4 * (Inputs!B66 + Inputs!B67)', 'Rectangular component of dry fill active force'],
         ['', 'ha_fill_dry_rect', '=Inputs!B35 + Inputs!B33 + Inputs!B31 + Inputs!B30/2', 'Height to centroid of dry fill rectangular force'],
-        ['', 'Pa_fill_dry_tri', '=0.5 * C5 * Inputs!B40 * Inputs!B30^2', 'Triangular component of dry fill active force'],
+        ['', 'Pa_fill_dry_tri', '=0.5 * C4 * Inputs!B40 * Inputs!B30^2', 'Triangular component of dry fill active force'],
         ['', 'ha_fill_dry_tri', '=Inputs!B35 + Inputs!B33 + Inputs!B31 + Inputs!B30/3', 'Height to centroid of dry fill triangular force'],
-        ['', 'Pa_fill_submerged_rect', '=Inputs!B31 * C5 * (Inputs!B66 + Inputs!B67 + Inputs!B40 * Inputs!B30)', 'Rectangular component of submerged fill active force'],
+        ['', 'Pa_fill_submerged_rect', '=Inputs!B31 * C4 * (Inputs!B66 + Inputs!B67 + Inputs!B40 * Inputs!B30)', 'Rectangular component of submerged fill active force'],
         ['', 'ha_fill_submerged_rect', '=Inputs!B35 + Inputs!B33 + Inputs!B31/2', 'Height to centroid of submerged fill rectangular force'],
-        ['', 'Pa_fill_submerged_tri', '=0.5 * C5 * (Inputs!B40 - Inputs!B43) * Inputs!B31^2', 'Triangular component of submerged fill active force'],
+        ['', 'Pa_fill_submerged_tri', '=0.5 * C4 * (Inputs!B40 - Inputs!B43) * Inputs!B31^2', 'Triangular component of submerged fill active force'],
         ['', 'ha_fill_submerged_tri', '=Inputs!B35 + Inputs!B33 + Inputs!B31/3', 'Height to centroid of submerged fill triangular force'],
         ['', 'Pa_fill', '=C6 + C8 + C10 + C12', 'Total active force from Reclamation Fill'],
         ['', 'ha_fill', '=(C6*C7 + C8*C9 + C10*C11 + C12*C13)/C14', 'Height to resultant of total active force from Reclamation Fill'],
