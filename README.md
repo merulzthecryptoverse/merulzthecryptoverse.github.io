@@ -77,6 +77,31 @@
     .button-container {
       text-align: center;
     }
+
+    /* Styling for headlines list */
+    .headlines-list {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      text-align: left;
+    }
+
+    .headlines-list li {
+      margin-bottom: 10px;
+    }
+
+    .headlines-list a {
+      color: #1e90ff; /* Bright blue for links, readable on dark background */
+      text-decoration: none;
+    }
+
+    .headlines-list a:hover {
+      text-decoration: underline;
+    }
+
+    .headlines-list span {
+      color: white; /* Date/description in white to match other text */
+    }
   </style>
 </head>
 <body>
@@ -90,6 +115,22 @@
   <h3 title="You are hovering over my header" class="MainHeader">
     Hong Kong Hacks, Adventures, and Lifestyle Tips
   </h3>
+
+  <!-- New section for Dimsum Daily headlines -->
+  <div class="content-div">
+    <p class="FirstPara">
+      Latest Headlines from Dimsum Daily HK
+    </p>
+    <ul class="headlines-list">
+      <!-- Placeholder for headlines; replace with content from headlines.md -->
+      <li><a href="https://www.dimsumdaily.hk/example">Example Headline 1</a> - Posted on August 19, 2025...</li>
+      <li><a href="https://www.dimsumdaily.hk/example">Example Headline 2</a> - Posted on August 19, 2025...</li>
+      <!-- Add more <li> items dynamically via headlines.md -->
+    </ul>
+    <p class="SecondPara">
+      Stay updated with the latest news from <a href="https://www.dimsumdaily.hk/" style="color: #1e90ff;">Dimsum Daily</a>.
+    </p>
+  </div>
 
   <div class="content-div">
     <p class="FirstPara">
